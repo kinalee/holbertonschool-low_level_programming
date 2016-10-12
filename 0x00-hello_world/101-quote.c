@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - the main function
  *
  * Description: It is the main function."
- * Return: Returned 0
+ * Return: Returned 1
  */
 
 int main(void)
