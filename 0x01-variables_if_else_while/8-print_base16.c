@@ -22,7 +22,7 @@ int main(void)
 		++d;
 	}
 
-	while ( h < 'g')
+	while (h < 'g')
 	{
 		putchar(h);
 		++h;
