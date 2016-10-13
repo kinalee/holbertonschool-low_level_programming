@@ -12,10 +12,11 @@ int main(void)
 {
 	char alpha;
 	char z;
+
 	alpha = 'a';
 	z = 'z';
 
-	while(alpha <= z)
+	while (alpha <= z)
 	{
 
 		putchar(alpha);
