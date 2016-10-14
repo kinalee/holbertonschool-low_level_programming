@@ -16,15 +16,20 @@ int main(void)
 	num = 0;
 	nine = 9;
 
-	while (num < 9)
+	while (num < 10)
 	{
-
 		putchar(num + '0');
-		putchar(',');
+
+		if (num < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+
 		++num;
+			
 	}
 
-	putchar(nine + '0');
 	putchar('\n');
 	return (0);
 }
