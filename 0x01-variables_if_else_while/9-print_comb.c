@@ -11,10 +11,8 @@ int main(void)
 {
 
 	int num;
-	int nine;
 
 	num = 0;
-	nine = 9;
 
 	while (num < 10)
 	{
@@ -27,7 +25,7 @@ int main(void)
 		}
 
 		++num;
-			
+
 	}
 
 	putchar('\n');
