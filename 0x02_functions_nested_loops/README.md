@@ -1,1 +1,0 @@
-Practicing how to use functions and nested loops
