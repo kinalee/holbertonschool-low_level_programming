@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
- * add - add two given integers and returns the sum
+ * print_to_98 - print numbers with a follwing comma and a space thru 98
+ * @n: given integer/tested integer
  *
- * Return: result of the fuction
+ * Return: no return
  */
 
 void print_to_98(int n)
