@@ -3,7 +3,6 @@
 /**
  * print_alphabet_x10 - prints 10 lines of alphabet letters from a to z
  *
- * Description: using nested loops
  * Return: returns 0
  */
 
@@ -14,7 +13,7 @@ void print_alphabet_x10(void)
 	int i = 0;
 	char a = 'a';
 
-	while (i < 11)
+	while (i < 10)
 	{
 		while (a <= 'z')
 		{
@@ -26,5 +25,4 @@ void print_alphabet_x10(void)
 		_putchar('\n');
 		++i;
 	}
-	return;
 }
