@@ -3,7 +3,7 @@
 /**
  * print_alphabet - prints lowercase alphabet letters from a to z
  *
- * Description: prints alphabets letters using while loop
+ * Description: prints alphabet letters using while loop
  * Return: no return
  */
 
