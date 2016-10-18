@@ -2,7 +2,7 @@
 
 /**
  * main - displays characters
- * 
+ *
  * Description: prints "Holberton" with a new line
  * Return: returns 0
  */

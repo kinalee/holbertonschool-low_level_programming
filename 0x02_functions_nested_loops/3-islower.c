@@ -6,7 +6,7 @@
  * @c: the input character/tested character
  *
  * Description: returns the value of 0 or 1, depending on the argument
- * Return: returns 0 or 1
+ * Return: returns 1 for lower case letters, 1 otherwise
  */
 
 int _islower(int c)
