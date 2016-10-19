@@ -11,24 +11,23 @@
 int main(void)
 {
 
-	unsigned long i, f, p, n, sum;
+	unsigned long f, p, n, sum;
 
-	i = n = 1;
-	p = sum = 0;
-
-	while (i < 4000000)
+	f = 0;
+	p = 1;
+	n = 2;
+	sum = 2;
+	
+	while (f < 4000000)
 	{		
 		f = p + n;
+		p = n;
+		n = f;
 
 		if (f % 2 == 0)
 		{
-			sum = f + sum;
+			sum += f;
 		}
-		
-		p = n;
-		n = f;
-		++i;
-
 	}
 	printf("%lu\n", sum);
 	return (0);
