@@ -13,20 +13,22 @@ int main(void)
 
 	unsigned long f, p, n, sum;
 
+	f = 0;
 	n = 1;
 	p = sum = 0;
 
-	while (1)
+	while (f < 4000000)
 	{
-
-		f = p + n;
-		if (f > 4000000)
+		if (f % 2 == 0)
 		{
-			break;
+			sum = f + sum;
 		}
-		sum = f + sum;
+		
+		f = p + n;
 		p = n;
 		n = f;
+		++f;
+
 	}
 	printf("%lu\n", sum);
 	return (0);
