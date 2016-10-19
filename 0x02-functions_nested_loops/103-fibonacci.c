@@ -17,9 +17,9 @@ int main(void)
 	p = 1;
 	n = 2;
 	sum = 2;
-	
+
 	while (f < 4000000)
-	{		
+	{
 		f = p + n;
 		p = n;
 		n = f;
