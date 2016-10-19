@@ -24,6 +24,14 @@ void print_times_table(int n)
 
 }
 
+/**
+ * num - prints one row of times table
+ * @r: row number of table
+ * @n: total number of table
+ *
+ * Return: no return
+ */
+
 void num(int r, int n)
 {
 
