@@ -13,18 +13,18 @@ int main(void)
 
 	unsigned long i, f, p, n, sum;
 
-	f = 0;
-	n = 1;
+	i = n = 1;
 	p = sum = 0;
 
 	while (i < 4000000)
-	{
+	{		
+		f = p + n;
+
 		if (f % 2 == 0)
 		{
 			sum = f + sum;
 		}
 		
-		f = p + n;
 		p = n;
 		n = f;
 		++i;
