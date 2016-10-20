@@ -35,7 +35,7 @@ int main(void)
 		{
 			printf("%ld", f1);
 
-			if (i != 97)
+			if (i != 98)
 			{
 				printf("%018ld, ", f2);
 			}
