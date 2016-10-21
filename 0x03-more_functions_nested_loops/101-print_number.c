@@ -10,35 +10,29 @@
 
 void print_number(int n)
 {
-	if (n >= 0 && n < 10)
-	{
-		_putchar(n + '0');
-	}
-	if (n >= 10 && n < 100)
-	{
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	if (n >= 100 && n < 1000)
-	{
-		_putchar(n / 100 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	if (n >= 1000 && n < 10000)
-	{
-		_putchar(n / 1000 + '0');
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar(n % 10 + '0');
 
-	}
-	if (n < 0 && n > -100)
+	int a;
+	int exp = 1;
+
+	if (n < 0)
 	{
 		n *= -1;
 		_putchar('-');
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
+	}
+
+	a = n;
+
+	while ((a / 10) > 0)
+	{
+
+		a = a / 10;
+		exp *= 10;
+	}
+
+	while (exp > 0)
+	{
+		_putchar((n / exp) % 10 + '0');
+		exp /= 10;
 	}
 
 }
