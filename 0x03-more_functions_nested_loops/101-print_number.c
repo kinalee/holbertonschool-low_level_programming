@@ -10,22 +10,25 @@
 
 void print_number(int n)
 {
-	if (n >= 0 && n < 10)
+
+	long a = n;
+	
+	if (a >= 0 && a < 10)
 	{
-		_putchar(n + '0');
+		_putchar(a + '0');
 	}
-	if (n >= 10 && n < 100)
+	if (a >= 10 && a < 100)
 	{
 		_putchar(n / 10 + '0');
 		_putchar(n % 10 + '0');
 	}
-	if (n >= 100 && n < 1000)
+	if (a >= 100 && a < 1000)
 	{
-		_putchar(n / 100 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar(n % 10 + '0');
+		_putchar(a / 100 + '0');
+		_putchar((a / 10) % 10 + '0');
+		_putchar(a % 10 + '0');
 	}
-	if (n >= 1000 && n < 10000)
+	if (a >= 1000 && a < 10000)
 	{
 		_putchar(n / 1000 + '0');
 		_putchar((n / 100) % 10 + '0');
@@ -33,12 +36,12 @@ void print_number(int n)
 		_putchar(n % 10 + '0');
 
 	}
-	if (n < 0 && n > -100)
+	if (a < 0 && a > -100)
 	{
-		n *= -1;
+		a *= -1;
 		_putchar('-');
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
+		_putchar(a / 10 + '0');
+		_putchar(a % 10 + '0');
 	}
 
 }
