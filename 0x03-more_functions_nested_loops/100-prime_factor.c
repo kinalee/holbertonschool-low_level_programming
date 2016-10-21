@@ -14,7 +14,7 @@ int main(void)
 	long d = 2;
 	long max;
 
-	while (1)
+	while (num != 1)
 	{
 		if (num % d != 0)
 		{
@@ -28,7 +28,6 @@ int main(void)
 			if (num == 1)
 			{
 				printf("%ld\n", max);
-				break;
 			}
 		}
 	}
