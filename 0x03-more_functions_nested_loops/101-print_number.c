@@ -13,15 +13,15 @@ void print_number(int n)
 
 	long num = n;
 	long temp;
-	log exp = 1;
+	long exp = 1;
 
-	if (n < 0)
+	if (num < 0)
 	{
-		n *= -1;
+		num *= -1;
 		_putchar('-');
 	}
 
-	temp = n;
+	temp = num;
 
 	while ((temp / 10) > 0)
 	{
@@ -33,7 +33,7 @@ void print_number(int n)
 	while (exp > 0)
 	{
 
-		_putchar((n / exp) % 10 + '0');
+		_putchar((num / exp) % 10 + '0');
 		exp /= 10;
 	}
 
