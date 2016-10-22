@@ -11,8 +11,9 @@
 void print_number(int n)
 {
 
-	int temp;
-	int exp = 1;
+	long num = n;
+	long temp;
+	log exp = 1;
 
 	if (n < 0)
 	{
@@ -29,13 +30,11 @@ void print_number(int n)
 		exp *= 10;
 	}
 
-	while (exp > 1)
+	while (exp > 0)
 	{
 
 		_putchar((n / exp) % 10 + '0');
 		exp /= 10;
 	}
-
-	_putchar(n % 10 + '0');
 
 }
