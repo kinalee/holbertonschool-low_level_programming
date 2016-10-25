@@ -1,4 +1,25 @@
 #include "holberton.h"
+
+/**
+ * _strlen - returns the length of a string
+ * @s: given pointer variable
+ *
+ * Return: returns string length
+ */
+
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (*s != 0)
+	{
+		++s;
+		++length;
+	}
+
+	return (length);
+}
+
 /**
  * print_rev - prints given string, in reverse, followed by a new line
  * @s: given string
@@ -6,25 +27,19 @@
  * Return: returns nothing
  */
 
-
 void print_rev(char *s)
 {
 
-	int i = 0;
+	int l;
 
-	while (*s != 0)
+	l = _strlen(s);
+
+	l = l - 1;
+
+	while (l >= 0)
 	{
-		++i;
-		++s;
-	}
-
-	s = s - 1;
-
-	while (i >= 0)
-	{
-		_putchar(*s);
-		--s;
-		--i;
+		_putchar(*(s + l));
+		--l;
 	}
 	_putchar('\n');
 }
