@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * _strlen - returns the length of a string
@@ -34,12 +33,12 @@ void rev_string(char *s)
 	int l, i, b;
 	char a;
 
-	l = _strlen(s) - 1;
+	l = _strlen(s);
 	i = 0;
 
 	while (i < l / 2)
 	{
-		b = l - i;
+		b = l - 1 - i;
 		a = s[i];
 		s[i] = s[b];
 		s[b] = a;
