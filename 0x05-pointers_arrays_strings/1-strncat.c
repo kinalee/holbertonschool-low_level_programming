@@ -43,7 +43,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	if (i == n && n == '\0')
 	{
-		dest[l] = src[i];
+		dest[l] = '\0';
 
 	}
 
