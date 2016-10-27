@@ -7,10 +7,9 @@
 
 int _atoi(char *s)
 {
-	int i, j, neg, integer;
-	char s2[50];
+	int i, neg, integer;
 
-	i = j = neg = integer = 0;
+	i = neg = integer = 0;
 
 	while (!(s[i] >= '0' && s[i] <= '9'))
 	{
@@ -18,31 +17,24 @@ int _atoi(char *s)
 		{
 			++neg;
 		}
-		++i;
+
 		if (s[i] == '\0')
 		{
 			return (0);
 		}
-
-	}
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		s2[j] = s[i];
-		++j;
 		++i;
 	}
 
-	s2[j] = '\0';
-	j = 0;
-
-	while (s2[j] != '\0')
+	while (s[i] >= '0' && s[i] <= '9' && s[i] != '\0')
 	{
-		integer = integer * 10 + (s2[j] - '0');
-		++j;
+		integer = integer * 10 - (s[i] - '0');
+		++i;
 	}
-	if (neg % 2 != 0)
+
+	if (neg % 2 == 0)
 	{
 		integer *= -1;
 	}
+
 	return (integer);
 }
