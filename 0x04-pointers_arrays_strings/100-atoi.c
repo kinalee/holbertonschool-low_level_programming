@@ -2,7 +2,7 @@
  * _atoi - convert a string to an integer
  * @s : given character pointer
  *
- * Return: returns nothing
+ * Return: returns the result or 0.
  */
 
 int _atoi(char *s)
@@ -19,8 +19,12 @@ int _atoi(char *s)
 			++neg;
 		}
 		++i;
-	}
+		if (s[i] == '\0')
+		{
+			return (0);
+		}
 
+	}
 	while (s[i] >= '0' && s[i] <= '9')
 	{
 		s2[j] = s[i];
