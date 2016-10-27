@@ -22,7 +22,7 @@ int _strlen(char *n)
 }
 
 /**
- * _strcat(char *dest, char *src) - concatenates two strings
+ * _strcat - concatenates two strings
  * @dest:first string pointer
  * @src: second string pointer
  *
