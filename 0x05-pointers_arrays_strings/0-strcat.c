@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * _strlen - returns the length of a string
  * @n: given character/string  pointer
@@ -13,7 +11,6 @@ int _strlen(char *n)
 
 	while (n[l] != '\0')
 	{
-		printf("%d", l);
 		++l;
 	}
 
@@ -34,9 +31,7 @@ char *_strcat(char *dest, char *src)
 	int i, l;
 
 	i = 0;
-	printf("before\n");
 	l = _strlen(dest);
-	printf("after\n");
 
 	while (src[i] != '\0')
 	{
