@@ -3,22 +3,17 @@
  * @s1: first given value
  * @s2: second given value
  *
- * Return: -15, 15, or 0
+ * Return: (s1 - s2) or 0
  */
 
 int _strcmp(char *s1, char *s2)
 {
-	if (s1 < s2)
+	int i = 0;
+
+	while ((s1[i] != '\0' || s2[i] != '\0') && s1[i] == s2[i])
 	{
-		return (-15);
-	}
-	else if (s1 > s2)
-	{
-		return (15);
-	}
-	else
-	{
-		return (0);
+		++i;
 	}
 
+	return (s1[i] - s2[i]);
 }
