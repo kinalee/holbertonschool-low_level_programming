@@ -1,9 +1,4 @@
 #include <stdio.h>
-/**
- * main - changes the value of a[2] to 98
- *
- * Return: returns nothing
- */
 
 int main(void)
 {
