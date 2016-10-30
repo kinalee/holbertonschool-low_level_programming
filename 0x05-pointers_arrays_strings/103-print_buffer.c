@@ -16,7 +16,7 @@ void print_buffer(char *b, int size)
 
 	while (i < size)
 	{
-		printf("%08x: ", b[i]);
+		printf("%08x: ", i);
 		k = 0;
 		while (k < 5)
 		{
