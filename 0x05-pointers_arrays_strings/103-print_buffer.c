@@ -1,5 +1,26 @@
 #include <stdio.h>
 #include <ctype.h>
+
+/**
+ * _isprint - printfs a character or dot depending on the status of argument
+ * @c: given character
+ *
+ * Return: returns nothing.
+ */
+
+void _isprint(char c)
+{
+	if (isprint(c))
+	{
+		printf("%c", c);
+	}
+	else
+	{
+		printf(".");
+	}
+}
+
+
 /**
  * print_buffer - prints a buffer
  * @b: given string
@@ -17,37 +38,31 @@ void print_buffer(char *b, int size)
 	{
 		printf("\n");
 	}
-	while (i < size)
-	{
-		printf("%08x: ", i);
-		k = 0;
-		while (k < 5)
+	else
+		while (i < size)
 		{
-			if (j < size - 1)
+			printf("%08x: ", i);
+			k = 0;
+			while (k < 5)
 			{
-			printf("%02x%02x ", b[j], b[j + 1]);
+				if (j < size)
+				{
+					printf("%02x%02x ", b[j], b[j + 1]);
+				}
+				else
+				{
+					printf("     ");
+				}
+				j = j + 2;
+				++k;
 			}
-			else
+			k = 0;
+			while (k < 10 && i < size)
 			{
-				printf("     ");
+				_isprint(*(b + i));
+				++k;
+				++i;
 			}
-			j = j + 2;
-			++k;
+			printf("\n");
 		}
-		k = 0;
-		while (k < 10 && i < size)
-		{
-			if (isprint(b[i]))
-			{
-				printf("%c", b[i]);
-			}
-			else
-			{
-				printf(".");
-			}
-			++k;
-			++i;
-		}
-		printf("\n");
-	}
 }
