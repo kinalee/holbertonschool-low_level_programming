@@ -1,0 +1,1 @@
+Learn how to manipulate strings with pointers. 2-dimemtional arrays and pointers to pointers.
