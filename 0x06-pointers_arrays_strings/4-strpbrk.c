@@ -33,30 +33,29 @@ int _strlen(char *s)
 char *_strpbrk(char *s, char *accept)
 {
 	int i, j, ls, la, bool;
-	char *c;
 
 	i = 0;
 	ls = _strlen(s);
 	la = _strlen(accept);
 
-	while (i < ls)
+	while (i <= ls)
 	{
-		j = bool = 0;
+		j = 0;
+		bool = 1;
 
-		while (j < la)
+		while (j <= la)
 		{
 			if (s[i] == accept[j])
 			{
-				bool = 1;
+				bool = 0;
 			}
 
 			++j;
 		}
 
-		if (bool == 1)
+		if (bool == 0)
 		{
-			c = &s[i];
-			return (c);
+			return (&s[i]);
 		}
 		++i;
 	}
