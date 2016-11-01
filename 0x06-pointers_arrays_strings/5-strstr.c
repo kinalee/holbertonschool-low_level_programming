@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * _strstr - locates a substring
  * @haystack: given string
@@ -9,26 +10,32 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	int i, j, k;
 
 	i = 0;
 
 	while (haystack[i] != '\0')
 	{
 		j = 0;
+		k = i;
 
-		while (needle[j] != '\0' && haystack[i] != '\0' &&
-		       haystack[i] == needle[j])
+		while (needle[j] != '\0' && haystack[k] != '\0' &&
+		       haystack[k] == needle[j])
 		{
-			++i;
-			++j;
+			printf("i: %d\n", i);
+			printf("j: %d\n", j);
+			printf("k: %d\n", k);
+
+				++j;
+				++k;
 		}
 
 		if (needle[j] == '\0')
 		{
-			return (&haystack[i - j]);
+			return (&haystack[i]);
 		}
 		++i;
 	}
-	return (&haystack[i]);
+
+	return (0);
 }
