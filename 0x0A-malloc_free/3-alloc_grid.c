@@ -9,20 +9,28 @@
 
 int **alloc_grid(int width, int height)
 {
-	int i;
+	int i, j;
 	int **ary;
 
-	i = 0;
+	i = j = 0;
 
-	ary = malloc(sizeof(height));
+	ary = malloc(height * sizeof(int *));
 
 	while (i < height)
 	{
-		ary[i] = malloc(sizeof(width));
+		ary[i] = malloc(width * sizeof(int));
+
+		j = 0;
+
+		while (j < width)
+		{
+			ary[i][j] = 0;
+			++j;
+		}
+
 		++i;
 	}
 
-	ary[i] = '\0';
 	return (ary);
 	free(ary);
 }
