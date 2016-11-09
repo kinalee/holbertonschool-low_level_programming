@@ -25,6 +25,11 @@ char *_strdup(char *str)
 
 	copied_str = malloc(i * sizeof(char));
 
+	if (copied_str == NULL)
+	{
+		return (NULL);
+	}
+
 	i = 0;
 
 	while (str[i] != '\0')
