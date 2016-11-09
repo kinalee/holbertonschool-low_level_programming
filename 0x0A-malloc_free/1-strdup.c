@@ -22,12 +22,11 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
+	i++;
 
-	if (i != 0)
-	{
-		copied_str = malloc(i * sizeof(*str));
-	}
-	else
+	copied_str = malloc(i * sizeof(*str));
+
+	if (copied_str == NULL)
 	{
 		return (NULL);
 	}
@@ -41,5 +40,4 @@ char *_strdup(char *str)
 	}
 
 	return (copied_str);
-	free(str);
 }
