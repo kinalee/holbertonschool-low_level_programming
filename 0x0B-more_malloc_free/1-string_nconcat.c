@@ -3,6 +3,7 @@
  * string_nconcat - concatenates two strings
  * @s1: given pointer to a char 1
  * @s2: given pointer to a char 2
+ * @n: number of characters
  *
  * Return: returns a pointer to a newly allocated space in memory
  */
