@@ -24,12 +24,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 
-	realloc = malloc(new_size * sizeof(void *));
+	realloc = malloc(new_size);
 
 	if (realloc == NULL)
 		return (NULL);
 
-	if (new_size > old_size && ptr != NULL)
+	if (new_size > old_size)
 	{
 		for (i = 0; i < new_size - old_size; ++i)
 			realloc[i] = temp[i];
