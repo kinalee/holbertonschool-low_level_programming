@@ -9,7 +9,7 @@
  *Return: returns nothing
  */
 
-void print_numbers(const char *seperator, const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list print_num;
 	unsigned int i;
@@ -18,17 +18,10 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 
 	for (i = 0; i < n; ++i)
 	{
-
 		printf("%d", va_arg(print_num, unsigned int));
 
-		if (i < n - 1)
-		{
-
-			if (seperator == NULL)
-				return;
-			else
-			printf("%s", seperator);
-		}
+		if (i < n - 1 && separator != NULL)
+			printf("%s", separator);
 
 	}
 
