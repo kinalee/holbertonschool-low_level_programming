@@ -3,7 +3,7 @@
 
 /**
  *print_strings - prints strings, followed by a new line
- *@seperator: string to be printed between the strings
+ *@separator: string to be printed between the strings
  *@n: the number of strings passed to the function
  *
  *Return: returns nothing
@@ -16,7 +16,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char *str;
 
-	va_start (print_str, n);
+	va_start(print_str, n);
 
 	for (i = 0; i < n; ++i)
 	{
@@ -25,17 +25,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (str == NULL)
 			printf("(nil)");
 
-		if (i < n - 1)
-		{
-			printf("%s", str);
-			printf("%s", separator);
-		}
+		printf("%s", str);
 
-		else
-			printf("%s", str);
+		if (i < n - 1 && separator != NULL)
+			printf("%s", separator);
 
 	}
 
+	va_end(print_str);
 	printf("\n");
-	va_end (print_str);
 }
