@@ -3,7 +3,7 @@
 
 /**
  *print_numbers - prints numbers, followed by a new line
- *@seperator: string to be printed between numbers
+ *@separator: string to be printed between numbers
  *@n: the number of integers passed to the function
  *
  *Return: returns nothing
