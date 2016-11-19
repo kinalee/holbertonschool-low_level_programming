@@ -26,11 +26,11 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 
 			if (seperator == NULL)
 				return;
-
 			else
 			printf("%s", seperator);
 		}
 
 	}
 	printf("\n");
+	va_end (print_num);
 }
