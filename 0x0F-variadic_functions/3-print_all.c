@@ -7,7 +7,7 @@
  *print_all - prints anything - char, int, float, or string
  *@format: a list of types of arguments passed to the function
  *
- *Return: no return
+ *Return: returns nothing
  */
 
 void print_all(const char * const format, ...)
@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 				types.s = "(nil)";
 			printf("%s", types.s);
 			break;
-		default;
+		default:;
 		}
 		if (format[i + 1] != '\0' && (type == 'c' || type == 'i' ||
 					      type == 'f' || type == 's'))
