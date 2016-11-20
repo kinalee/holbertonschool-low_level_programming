@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			types.s = va_arg(print, char *);
-			if (types.s == NULL || types.s[0] == '\0')
+			if (types.s == NULL)
 				types.s = "(nil)";
 			printf("%s", types.s);
 			break;
