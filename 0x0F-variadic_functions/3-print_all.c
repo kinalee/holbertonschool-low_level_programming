@@ -41,7 +41,8 @@ void print_all(const char * const format, ...)
 				types.s = "(nil)";
 			printf("%s", types.s);
 			break;
-		default:;
+		default:
+			break;
 		}
 		if (format[i + 1] != '\0' && (type == 'c' || type == 'i' ||
 					      type == 'f' || type == 's'))
