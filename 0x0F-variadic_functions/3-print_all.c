@@ -14,12 +14,16 @@ void print_all(const char * const format, ...)
 {
 	va_list print;
 	int i = 0;
-	char type;
+	char type = 'a';
 	p_t types;
 
 	va_start(print, format);
 	while (format[i] != '\0' && format != NULL)
 	{
+		if (format[i + 1] != '\0' && (type == 'c' || type == 'i' ||
+					      type == 'f' || type == 's'))
+			printf(", ");
+
 		type = format[i];
 		switch (type)
 		{
@@ -33,7 +37,7 @@ void print_all(const char * const format, ...)
 			break;
 		case 'f':
 			types.f = va_arg(print, double);
-			printf("%e", types.f);
+			printf("%f", types.f);
 			break;
 		case 's':
 			types.s = va_arg(print, char *);
@@ -44,9 +48,6 @@ void print_all(const char * const format, ...)
 		default:
 			break;
 		}
-		if (format[i + 1] != '\0' && (type == 'c' || type == 'i' ||
-					      type == 'f' || type == 's'))
-			printf(", ");
 		++i;
 	}
 	va_end(print);
