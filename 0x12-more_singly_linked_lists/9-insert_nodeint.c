@@ -5,8 +5,8 @@
  * insert_nodeint_at_index - inserts a new node at a given position
  * @head: given list
  * @index: the index of the list where the new node
- * @n:
- * Return:
+ * @n: integer to be inserted
+ * Return: the address of the new node, or NULL if it failed
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 {
