@@ -11,10 +11,8 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int b;
 
-	if (index > sizeof(n) * 4)
+	if (index > (sizeof(n) * 4))
 		return (-1);
-
-	printf("%lu\n", sizeof(n) * 4);
 
 	b = n >> index;
 
