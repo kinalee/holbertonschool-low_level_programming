@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "holberton.h"
 
 /**
@@ -8,7 +8,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int res, pow;
+	unsigned int res, p2;
 	int l;
 
 	if (b == NULL)
@@ -21,12 +21,12 @@ unsigned int binary_to_uint(const char *b)
 
 	--l;
 
-	for (pow = 1; l >= 0; l--, pow *= 2)
+	for (p2 = 1; l >= 0; l--, p2 *= 2)
 	{
 		if (b[l] == '0')
 			;
 		else if (b[l] == '1')
-			res += pow;
+			res += p2;
 		else
 			return (0);
 	}
