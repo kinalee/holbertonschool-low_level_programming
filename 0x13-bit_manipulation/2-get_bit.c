@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * get_bit - returns the value of a bit at a given index
@@ -10,12 +11,15 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int b;
 
+	if (index > sizeof(n) * 4)
+		return (-1);
+
+	printf("%lu\n", sizeof(n) * 4);
+
 	b = n >> index;
 
 	if ((b & 1) == 1)
 		return (1);
 	if ((b & 0) == 0)
 		return (0);
-	else
-		return (-1);
 }
