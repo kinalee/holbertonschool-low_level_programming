@@ -9,7 +9,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int power;
 
-	for (power = 1; (power * 2) <= n; power *= 2)
+	for (power = 1; (power << 1) <= n; power <<= 1)
 		;
 
 	while (power >= 1)
