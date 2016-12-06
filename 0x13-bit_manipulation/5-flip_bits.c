@@ -9,20 +9,17 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int cmp, power, res;
+	unsigned long int cmp, res;
 
 	res = 0;
 	cmp = n ^ m;
 
-	for (power = 1; (power << 1) <= cmp; power <<= 1)
-		;
-
-	while (power >= 1)
+	while (cmp > 0)
 	{
-		if ((cmp & power) != 0)
+		if (cmp & 1)
 			res += 1;
 
-		power >>= 1;
+		cmp >>= 1;
 	}
 	return (res);
 }
