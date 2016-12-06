@@ -9,12 +9,6 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int power;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-
 	for (power = 1; (power * 2) <= n; power *= 2)
 		;
 
