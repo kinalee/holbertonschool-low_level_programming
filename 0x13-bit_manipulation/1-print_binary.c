@@ -8,7 +8,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int power;
-	long int p;
+	long long int p;
 
 	for (power = 1; (power * 2) <= n; power *= 2)
 		;
