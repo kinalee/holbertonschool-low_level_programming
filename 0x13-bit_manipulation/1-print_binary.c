@@ -8,27 +8,19 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int power;
+	long int p;
 
 	for (power = 1; (power * 2) <= n; power *= 2)
 		;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-	if (n == 1)
-	{
-		_putchar('1');
-		return;
-	}
+	p = power;
 
-	while (power > 0)
+	while (p >= 1)
 	{
-		if ((power & n) > 0)
+		if ((p & n) != 0)
 			_putchar('1');
 		else
 			_putchar('0');
-		power = power >> 1;
+		p = p >> 1;
 	}
 }
