@@ -31,7 +31,7 @@ int main(int ac, char **av)
 		r = read(from, context, BUFFSIZE);
 		if (r == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from files %s\n", av[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 			exit(98);
 		}
 		if (r > 0)
