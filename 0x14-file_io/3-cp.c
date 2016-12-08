@@ -26,7 +26,7 @@ int main(int ac, char **av)
 
 	r = w = 1;
 
-	while (r > 0)
+	while (r)
 	{
 		r = read(from, context, BUFFSIZE);
 		if (r == -1)
