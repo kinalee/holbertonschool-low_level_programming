@@ -9,7 +9,7 @@
 int main(int ac, char **av)
 {
 	int from, to, r, w, cf, ct;
-	char context[1204];
+	char context[BUFFSIZE];
 
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
@@ -28,7 +28,7 @@ int main(int ac, char **av)
 
 	while (r > 0)
 	{
-		r = read(from, context, 1204);
+		r = read(from, context, BUFFSIZE);
 		if (r == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from files %s\n", av[1]);
