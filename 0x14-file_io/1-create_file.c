@@ -20,11 +20,13 @@ int create_file(const char *filename, char *text_content)
 
 	i = 0;
 
+	if (text_content == NULL)
+		return (-1);
+
 	while (text_content[i] != '\0')
 		++i;
 
-	if (text_content != NULL)
-		p = write(fd, text_content, i);
+	p = write(fd, text_content, i);
 
 	if (p == -1)
 		return (-1);
