@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	fd = open(filename, O_RDWR);
+	fd = open(filename, O_CREAT);
 
 	if (fd == -1)
 		return (0);
@@ -31,7 +31,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	p = write(1, buffer, r);
 
-	if (p == NULL)
+	if (p == -1)
 		return (0);
 
 	close(fd);
