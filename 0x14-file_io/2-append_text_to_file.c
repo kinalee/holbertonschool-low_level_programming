@@ -22,10 +22,10 @@ int append_text_to_file(const char *filename, char *text_content)
 	for (i = 1; text_content != '\0'; ++i)
 		;
 
-	if (text_content != NULL)
-		w = write(fd, text_content, i);
-	else
+	if (text_content == NULL)
 		return (-1);
+	else
+		w = write(fd, text_content, i);
 
 	if (w == -1)
 		return (-1);
