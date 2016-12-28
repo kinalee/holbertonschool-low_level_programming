@@ -1,18 +1,13 @@
 #include "holberton.h"
 
 /**
- * print_sign - print +,-, or = sign depending on the result of the
- *\given argument
- * @n: given integer/tested integer
- *
- * Description: prints signs before returns a value
+ * print_sign - prints the +,-, or 0, depending on the given number
+ * @n: given integer
  * Return: returns 1 for the positive numbers, 0 for zero, and -1 for negative
  * \numbers.
  */
-
 int print_sign(int n)
 {
-
 	if (n > 0)
 	{
 		_putchar('+');
@@ -28,6 +23,4 @@ int print_sign(int n)
 		_putchar('-');
 		return (-1);
 	}
-
-
 }

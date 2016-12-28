@@ -1,12 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - displays characters
- *
- * Description: prints "Holberton" with a new line
+ * main - prints "Holberton"
  * Return: returns 0
  */
-
 int main(void)
 {
 		_putchar('H');
@@ -20,7 +17,5 @@ int main(void)
 		_putchar('n');
 		_putchar('\n');
 
-
 	return (0);
-
 }

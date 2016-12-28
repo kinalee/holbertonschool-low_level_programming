@@ -2,36 +2,25 @@
 
 /**
  * main - prints first 50 Fibonacci numbers
- *
  * Return: returns 0
  */
-
-
-
 int main(void)
 {
+	long i, cur, prev, fib;
 
-	unsigned long f, p, i, n;
-
-	p = 0;
-	i = n = 1;
-
-	while (i <= 50)
+	i = 0;
+	cur = fib = 1;
+	while (i < 50)
 	{
-		f = n + p;
+		printf("%ld", fib);
+		if (i < 49)
+			printf(", ");
 
-		if (i != 50)
-		{
-			printf("%lu, ", f);
-		}
-		else
-		{
-			printf("%lu\n", f);
-		}
-
-		p = n;
-		n = f;
+		prev = cur;
+		cur = fib;
+		fib = prev + cur;
 		++i;
 	}
+	printf("\n");
 	return (0);
 }

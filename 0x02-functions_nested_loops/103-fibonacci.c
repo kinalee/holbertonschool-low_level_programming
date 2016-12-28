@@ -3,32 +3,23 @@
 /**
  * main - calculates the sum of Fibonacci numbers, before its value exceeds
  * \4,000,000
- *
  * Return: returns 0
  */
-
-
 int main(void)
 {
+	int prev, cur, fib, sum;
 
-	unsigned long f, p, n, sum;
-
-	f = 0;
-	p = 1;
-	n = 2;
-	sum = 2;
-
-	while (f < 4000000)
+	sum = 0;
+	cur = fib = 1;
+	while (fib < 4000000)
 	{
-		f = p + n;
-		p = n;
-		n = f;
+		if (fib % 2 == 0)
+			sum += fib;
 
-		if (f % 2 == 0)
-		{
-			sum += f;
-		}
+		prev = cur;
+		cur = fib;
+		fib = prev + cur;
 	}
-	printf("%lu\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
