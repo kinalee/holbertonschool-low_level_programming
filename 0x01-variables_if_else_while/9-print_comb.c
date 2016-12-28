@@ -1,33 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - the main and essential function to run this program
- *
- * Description: printing numbers in ascending order with a following comma
+ * main - prints all possible combinations of single-digit numbers
  * Return: retunrs 0
  */
-
 int main(void)
 {
+	int i = 0;
 
-	int num;
-
-	num = 0;
-
-	while (num < 10)
+	while (i < 10)
 	{
-		putchar(num + '0');
+		putchar(i + '0');
 
-		if (num < 9)
+		if (i < 9)
 		{
 			putchar(',');
 			putchar(' ');
 		}
-
-		++num;
-
+		++i;
 	}
-
 	putchar('\n');
 	return (0);
 }

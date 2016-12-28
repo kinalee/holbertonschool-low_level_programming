@@ -1,33 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - the main and essential function to run this program
- *
- * Description: printing hexadecial number pattern from 0-f
+ * main - prints all the numbers of base 16
  * Return: retunrs 0
  */
-
 int main(void)
 {
 
-	int d;
-	char h;
+	int i = 0;
+	char c = 'a';
 
-	d = 0;
-	h = 'a';
-
-	while (d < 10)
+	while (i < 10)
 	{
-		putchar(d + '0');
-		++d;
+		putchar(i + '0');
+		++i;
 	}
-
-	while (h < 'g')
+	while (c <= 'f')
 	{
-		putchar(h);
-		++h;
+		putchar(c);
+		++c;
 	}
-
 	putchar('\n');
 	return (0);
 }

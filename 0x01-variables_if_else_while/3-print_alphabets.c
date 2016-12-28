@@ -1,41 +1,24 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * main - the main and essential function to run this program
- *
- * Description: display alphabet pattern thru a-z with lower cases
- * \and then upper cases followed by a newline
+ * main - prints the alphabet in lowercase, and then in uppercase
  * Return: returns 0
  */
-
 int main(void)
 {
-	char alphaLower;
-	char alphaUpper;
-	char Z;
-	char z;
+	char a = 'a';
+	char A = 'A';
 
-	alphaLower = 'a';
-	z = 'z';
-	alphaUpper = 'A';
-	Z = 'Z';
-
-	while (alphaLower <= z)
+	while (a <= 'z')
 	{
-
-		putchar(alphaLower);
-		++alphaLower;
+		putchar(a);
+		++a;
 	}
-
-	while (alphaUpper <= Z)
+	while (A <= 'Z')
 	{
-
-		putchar(alphaUpper);
-		++alphaUpper;
+		putchar(A);
+		++A;
 	}
-
 	putchar('\n');
-
 	return (0);
 }

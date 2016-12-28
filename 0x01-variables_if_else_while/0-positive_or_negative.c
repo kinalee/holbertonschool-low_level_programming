@@ -3,12 +3,10 @@
 #include <time.h>
 
 /**
- * main - the main and essential function to run this program
- *
- * Description: tests if n is greater than, less than, or equal to 0.
+ * main - print whether the number stored in the variable n is
+ *\positive, negative, or zero
  * Return: returns 0
  */
-
 int main(void)
 {
 	int n;
@@ -17,16 +15,13 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 
 	if (n > 0)
-	{
 		printf("%d is positive\n", n);
-	}
+
 	else if (n == 0)
-	{
 		printf("%d is zero\n", n);
-	}
+
 	else if (n < 0)
-	{
 		printf("%d is negative\n", n);
-	}
+
 	return (0);
 }

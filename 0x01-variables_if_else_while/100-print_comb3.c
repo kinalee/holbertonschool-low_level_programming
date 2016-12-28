@@ -1,46 +1,29 @@
 #include <stdio.h>
 
 /**
- *main - the main and essential function to run this program
- *
- *Description: print all the possible
+ *main - prints all possible different combinations of two digits
  *Return: returns 0
  */
-
 int main(void)
 {
+	int i, one, ten;
 
-	int ones;
-	int tens;
-
-	ones = 0;
-	tens = 0;
-
-	while (ones < 10 && tens < 10)
+	i = 0;
+	while (i < 100)
 	{
-
-		if (ones != tens && tens < ones)
+		one = i % 10;
+		ten = i / 10;
+		if (one > ten)
 		{
-
-		putchar(tens + '0');
-		putchar(ones + '0');
-
-		if (ones != 9 || tens != 8)
-		{
-			putchar(',');
-			putchar(' ');
+			putchar(ten + '0');
+			putchar(one + '0');
+			if (i != 89)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
-		}
-		++ones;
-
-		if (ones == 10)
-		{
-
-			ones = 0;
-			++tens;
-
-		}
-
+		++i;
 	}
 	putchar('\n');
 	return (0);
