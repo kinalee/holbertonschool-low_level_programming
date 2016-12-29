@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * add - add two given integers and returns the sum
  * @a: given integer 1
@@ -8,7 +6,8 @@
  */
 int add(int a, int b)
 {
-	int sum = a + b;
+	int sum;
 
+	sum = a + b;
 	return (sum);
 }
