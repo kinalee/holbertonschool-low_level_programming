@@ -3,42 +3,32 @@
 /**
  * print_triangle - prints # signs and makes a triangle that 'size' as
  *\ it's lower base
- * @size: given integer/size of the lower base of triangle
- *
- * Return: no return
+ * @size: size of the lower base of triangle
+ * Return: returns nothing
  */
-
-
-
 void print_triangle(int size)
 {
+	int i, j, k;
 
-	int i = 1;
+	if (size <= 0)
+		_putchar('\n');
 
-	while (i <= size)
+	i = 0;
+	while (i < size)
 	{
-		int j = size - 1;
-		int k = 1;
-
-		while (j >= i)
+		k = i;
+		while (size - k > 1)
 		{
 			_putchar(' ');
-			--j;
-		}
-
-		while (k <= i)
-		{
-			_putchar('#');
 			++k;
 		}
-
+		j = 0;
+		while (j <= i)
+		{
+			_putchar('#');
+			++j;
+		}
 		_putchar('\n');
 		++i;
 	}
-
-	if (size <= 0)
-	{
-		_putchar('\n');
-	}
-
 }

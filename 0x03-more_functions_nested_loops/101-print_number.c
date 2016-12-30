@@ -1,40 +1,43 @@
 #include "holberton.h"
 
 /**
- * print_number - print given integers
- * @n: given/tested integer
- *
- * Description: Only use _putchar to print
- * Return: no return
+ * print_number - print given integer
+ * @n: given integer
+ * Description: Only use _putchar function to print
+ * Return: returns nothing
  */
-
 void print_number(int n)
 {
+	int len, div, res, tmp;
 
-	long num = n;
-	long temp;
-	long exp = 1;
-
-	if (num < 0)
-	{
-		num *= -1;
+	if (n >= 0)
+		n *= -1;
+	else
 		_putchar('-');
-	}
 
-	temp = num;
-
-	while ((temp / 10) > 0)
+	len = 1;
+	tmp = n;
+	/* getting the length of n */
+	while (tmp / 10 < 0)
 	{
-
-		temp = temp / 10;
-		exp *= 10;
+		tmp /= 10;
+		++len;
 	}
 
-	while (exp > 0)
+	div = 1;
+	tmp = len;
+	/* getting the divisor */
+	while (tmp > 1)
 	{
-
-		_putchar((num / exp) % 10 + '0');
-		exp /= 10;
+		div *= 10;
+		--tmp;
 	}
 
+	while (len > 0)
+	{
+		res = ((n / div) % 10) * -1;
+		_putchar(res + '0');
+		--len;
+		div /= 10;
+	}
 }

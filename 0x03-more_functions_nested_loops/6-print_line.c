@@ -1,25 +1,18 @@
 #include "holberton.h"
 
 /**
- * print_line - draws a straight line
+ * print_line - prints n underscore(s)
  * @n: given integer
- *
- * Description: prints n times of underscore
- * Return: no return
+ * Return: returns nothing
  */
-
 void print_line(int n)
 {
+	int i = 0;
 
-	int i = 1;
-
-	while (i <= n)
+	while (i < n)
 	{
-
 		_putchar('_');
 		++i;
 	}
-
 	_putchar('\n');
-
 }
