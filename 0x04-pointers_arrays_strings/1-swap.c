@@ -1,17 +1,14 @@
 /**
  * swap_int - swaps the value of given integers
- * @a: given pointer
- * @b: given pointer
- *
+ * @a: given pointer to an integer 1
+ * @b: given pointer to an integer 2
  * Return: returns nothing.
  */
-
-
 void swap_int(int *a, int *b)
 {
-	int c;
+	int tmp;
 
-	c = *a;
+	tmp = *a;
 	*a = *b;
-	*b = c;
+	*b = tmp;
 }

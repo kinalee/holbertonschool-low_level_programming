@@ -2,44 +2,35 @@
 
 /**
  * _strlen - returns the length of a string
- * @s: given pointer variable
- *
- * Return: returns string length
+ * @s: given string
+ * Return: length of the given string
  */
-
 int _strlen(char *s)
 {
-	int length = 0;
+	int i = 0;
 
-	while (*s != 0)
-	{
-		++s;
-		++length;
-	}
+	while (s[i] != '\0')
+		++i;
 
-	return (length);
+	return (i);
 }
 
 /**
  * print_rev - prints given string, in reverse, followed by a new line
  * @s: given string
- *
  * Return: returns nothing
  */
-
 void print_rev(char *s)
 {
+	int i;
 
-	int l;
+	i = _strlen(s);
+	--i;
 
-	l = _strlen(s);
-
-	l = l - 1;
-
-	while (l >= 0)
+	while (i >= 0)
 	{
-		_putchar(*(s + l));
-		--l;
+		_putchar(s[i]);
+		--i;
 	}
 	_putchar('\n');
 }
