@@ -8,7 +8,7 @@
  * Return: the address of the new node, or NULL if it failed
  */
 dlistint_t *insert_dnodeint_at_idx(dlistint_t **head,
-				   unsigned int index, int n)
+				   unsigned int idx, int n)
 {
 	dlistint_t *cur, *new_node;
 	unsigned int i;
@@ -20,7 +20,7 @@ dlistint_t *insert_dnodeint_at_idx(dlistint_t **head,
 	for (i = 0; cur != NULL; ++i, cur = cur->next)
 		;
 
-	if (index >= i)
+	if (idx >= i)
 		return (NULL);
 
 	new_node = malloc(sizeof(dlistint_t));
@@ -28,7 +28,7 @@ dlistint_t *insert_dnodeint_at_idx(dlistint_t **head,
 		return (NULL);
 
 	new_node->n = n;
-	if (index == 0)
+	if (idx == 0)
 	{
 		new_node->next = *head;
 		new_node->prev = NULL;
