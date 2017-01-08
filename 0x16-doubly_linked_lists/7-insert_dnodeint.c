@@ -3,11 +3,11 @@
 /**
  * insert_dnodeint_at_idx - inserts a new node at the given position
  * @head: pointer to the given linked list
- * @idx: index
+ * @index: index
  * @n: element(integer) to be inserted
  * Return: the address of the new node, or NULL if it failed
  */
-dlistint_t *insert_dnodeint_at_idx(dlistint_t **head, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_idx(dlistint_t **head, unsigned int index, int n)
 {
 	dlistint_t *cur, *new_node;
 	unsigned int i;
