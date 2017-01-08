@@ -7,7 +7,8 @@
  * @n: element(integer) to be inserted
  * Return: the address of the new node, or NULL if it failed
  */
-dlistint_t *insert_dnodeint_at_idx(dlistint_t **head, unsigned int index, int n)
+dlistint_t *insert_dnodeint_at_idx(dlistint_t **head,
+				   unsigned int index, int n)
 {
 	dlistint_t *cur, *new_node;
 	unsigned int i;
@@ -27,13 +28,6 @@ dlistint_t *insert_dnodeint_at_idx(dlistint_t **head, unsigned int index, int n)
 		return (NULL);
 
 	new_node->n = n;
-	if (*head == NULL)
-	{
-		*head = new_node;
-		new_node->next = NULL;
-		new_node->prev = NULL;
-		return (*head);
-	}
 	if (index == 0)
 	{
 		new_node->next = *head;
