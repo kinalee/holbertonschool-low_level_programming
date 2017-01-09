@@ -21,15 +21,15 @@ dlistint_t *insert_dnodeint_at_idx(dlistint_t **h, unsigned int idx, int n)
 
 	new_node->n = n;
 	new_node->next = NULL;
+	new_node->prev = NULL;
 	if (*h == NULL)
 	{
-		new_node->next = NULL; new_node->prev = NULL; *h = new_node;
+		*h = new_node;
 		return (*h);
 	}
 	if (idx == 0)
 	{
-		new_node->next = *h; new_node->prev = NULL;
-		(*h)->prev = new_node; *h = new_node;
+		new_node->next = *h; (*h)->prev = new_node; *h = new_node;
 		return (*h);
 	}
 	else
