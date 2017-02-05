@@ -12,7 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int i;
 	hash_node_t *head, *cur, *new_node;
 
-	if (ht == NULL || key == NULL)
+	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 
 	i = key_index((const unsigned char *)key, ht->size);
@@ -21,6 +21,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(cur->key, key) == 0)
 		{
+			free(cur->value);
 			cur->value = strdup(value);
 			return (1);
 		}
