@@ -12,6 +12,9 @@ void insertion_sort_list(listint_t **list)
 	unsigned int i, j;
 	listint_t *pre, *cur, *tmp;
 
+	if (list == NULL || *list == NULL)
+		return;
+
 	size = size_of_list(*list);
 	for(i = 1; i < size; ++i)
 	{
