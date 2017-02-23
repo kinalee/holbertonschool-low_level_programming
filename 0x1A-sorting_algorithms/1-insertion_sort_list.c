@@ -16,7 +16,10 @@ void insertion_sort_list(listint_t **list)
 		return;
 
 	size = size_of_list(*list);
-	for(i = 1; i < size; ++i)
+	if (size < 2)
+		return;
+
+	for (i = 1; i < size; ++i)
 	{
 		cur =  *list;
 		for (j = 0; j < i; ++j)
