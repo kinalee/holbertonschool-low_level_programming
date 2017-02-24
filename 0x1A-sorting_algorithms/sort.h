@@ -8,6 +8,7 @@
  * struct listint_s - Singly linked list node
  *
  * @n: Integer stored in the node
+ * @prev: Pointer to the previous elemnet of the list
  * @next: Pointer to the next element of the list
  */
 typedef struct listint_s
