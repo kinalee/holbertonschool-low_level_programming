@@ -1,6 +1,6 @@
 # -*- MakeFile -*-
 CC=gcc
-SRC=$(wildcard *.c)
+SRC=main.c holberton.c
 OBJ=$(SRC:.c=.o)
 NAME=holberton
 RM=rm -f
