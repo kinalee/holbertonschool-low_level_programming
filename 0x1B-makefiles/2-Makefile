@@ -1,4 +1,3 @@
-# -*- MakeFile -*-
 CC=gcc
 SRC=$(wildcard *.c)
 OBJ=$(SRC:.c=.o)
