@@ -43,9 +43,9 @@ int binary_helper(int *array, int min, int max, int value)
 			else
 				printf("%d\n", array[i]);
 		}
-		if (array[med] == value)
+		if (array[med] == value && array[med - 1] != value)
 			return (med);
-		else if (array[med] > value)
+		else if (array[med] > value || array[med - 1] == value)
 			return (binary_helper(array, min, med, value));
 		else
 			return (binary_helper(array, med + 1, max, value));
